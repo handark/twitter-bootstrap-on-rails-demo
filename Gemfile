@@ -25,6 +25,8 @@ gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 
 gem 'show_for'
 
+gem 'heroku'
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
