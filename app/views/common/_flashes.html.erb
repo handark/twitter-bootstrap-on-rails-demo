@@ -1,17 +1,8 @@
-<% unless flash[:notice].blank? %>
-  <div class="alert-message info">
-    <%= content_tag :div, flash[:notice] %>
-  </div>
-<% end %>
-
-<% unless flash[:error].blank? %>
-  <div class="alert-message error">
-    <%= content_tag :div, flash[:error] %>
-  </div>
-<% end %>
-
-<% unless flash[:alert].blank? %>
-  <div class="alert-message warning">
-    <%= content_tag :div, flash[:alert] %>
-  </div>
+<% [:notice, :error, :alert].each do |level| %>
+  <% unless flash[level].blank? %>
+    <div class="alert-message <%= level.to_s %>" data-alert>
+      <a class="close" href="#">×</a>
+      <%= content_tag :p, flash[level] %>
+    </div>
+  <% end %>
 <% end %>
