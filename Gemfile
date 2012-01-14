@@ -27,6 +27,8 @@ gem 'show_for'
 
 gem 'heroku'
 
+gem 'less-rails-bootstrap'
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
