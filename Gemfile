@@ -1,10 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.3'
 
 group :production do
   gem 'pg'
-  gem 'therubyracer-heroku'
 end
 
 group :development, :test do
